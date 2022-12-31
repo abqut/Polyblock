@@ -23,10 +23,10 @@ this game is heavily inspired by Yining Shi's brick breaker game: https://youtu.
 
 font is from google fonts: https://fonts.google.com/share?selection.family=Nunito:wght@600
 */
-let myFont;
-function preload() {
-  myFont = loadFont('nunito.ttf');
-}
+// let myFont;
+// function preload() {
+//   myFont = loadFont('nunito.ttf');
+// }
 
 function polygon(x, y, radius, npoints) {
   let angle = TWO_PI / npoints;
@@ -49,7 +49,7 @@ function distance(x1, y1, x2, y2){
 
 function setup() {
   createCanvas(1000, 1000);
-  textFont(myFont);
+  textFont('Nunito');
   let fps = 50;
   frameRate(fps);
   playerPosition = width / 2;
