@@ -25,7 +25,7 @@ font is from google fonts: https://fonts.google.com/share?selection.family=Nunit
 */
 let myFont;
 function preload() {
-  myFont = loadFont('/nunito.ttf');
+  myFont = loadFont('nunito.ttf');
 }
 
 function polygon(x, y, radius, npoints) {
