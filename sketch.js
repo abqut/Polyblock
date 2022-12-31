@@ -48,7 +48,7 @@ function distance(x1, y1, x2, y2){
 }
 
 function setup() {
-  createCanvas( displayWidth, Math.floor((6 / 7) * displayHeight));
+  createCanvas( displayWidth, displayHeight);
   textFont('Nunito');
   let fps = 50;
   frameRate(fps);
@@ -115,7 +115,7 @@ function mylerp(a, b ,t){
 }
 
 function collideBar(){
-  if((playerPosition - ballRad/2 < ball[0] &&  ball[0] < playerPosition + barLength + ballRad/2) && ((height - 40 - ballRad/2 < ball[1] &&  ball[1] < height - 20 + ballRad/2 ))){
+  if((playerPosition - ballRad/2 < ball[0] &&  ball[0] < playerPosition + barLength + ballRad/2) && ((playField[1] + 200 - ballRad/2 < ball[1] &&  ball[1] < playField[1] + 180 + ballRad/2 ))){
     ballAngle = mylerp(PI, 0, (ball[0] - playerPosition) / barLength);
   }
 }
@@ -128,7 +128,7 @@ function draw() {
   rect(2,2,width - 3, height - 3);
   if(!win){globalRot = (globalRot + 0.002) % TWO_PI;
   if(!start){
-    ball = [playerPosition + ((barLength ) / 2 - 1), height - (40 + ballRad / 2)];
+    ball = [playerPosition + ((barLength ) / 2 - 1), playField[1] + 200 - ballRad / 2];
     for(let i = 0; i < afterImageN; i++){
       afterImage[i] = ball;
     }
@@ -180,7 +180,7 @@ function draw() {
 
   stroke(color(91, 206, 250));
   fill(color(240));
-  rect(playerPosition, height - 40, barLength, 20);
+  rect(playerPosition, playField[1] + 200, barLength, 20);
   stroke(color(ballColor[0], ballColor[1], ballColor[2]));
   fill(color(ballColor[0], ballColor[1], ballColor[2]))
   circle(ball[0], ball[1], ballRad);
