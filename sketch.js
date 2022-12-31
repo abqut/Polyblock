@@ -239,14 +239,14 @@ function touchStarted(){
     }
 }
 
-function mousePressed(){
-    if(!start){
-      start = true;
-    }
-    else if(win){
-      setup();
-    }
-}
+// function mousePressed(){
+//     if(!start){
+//       start = true;
+//     }
+//     else if(win){
+//       setup();
+//     }
+// }
 
 function keyPressed(){
   if(key == 'a'){
