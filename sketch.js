@@ -48,7 +48,7 @@ function distance(x1, y1, x2, y2){
 }
 
 function setup() {
-  createCanvas( displayWidth, displayHeight);
+  createCanvas( windowWidth, windowHeight);
   textFont('Nunito');
   let fps = 50;
   frameRate(fps);
