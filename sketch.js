@@ -25,7 +25,7 @@ font is from google fonts: https://fonts.google.com/share?selection.family=Nunit
 */
 let myFont;
 function preload() {
-  myFont = loadFont('/nunito.ttf');
+  //myFont = loadFont('/nunito.ttf');
 }
 
 function polygon(x, y, radius, npoints) {
@@ -49,7 +49,7 @@ function distance(x1, y1, x2, y2){
 
 function setup() {
   createCanvas(1000, 1000);
-  textFont(myFont);
+  //textFont(myFont);
   let fps = 50;
   frameRate(fps);
   playerPosition = width / 2;
